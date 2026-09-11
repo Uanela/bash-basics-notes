@@ -107,7 +107,7 @@ echo "${#my_array[@]}" # the length, kind like lua
 ### 1.8.4. Exit status operators
 
 - `[[ $? -eq 0 ]]` - True if command was successful
-- `[[ $? -get 0 ]]` - True if command has errors
+- `[[ $? -ge 0 ]]` - True if command has errors
 
 ## 1.9 Conditionals Statements
 
@@ -193,7 +193,7 @@ done
 
 ```bash
 counter=1
-while [[ $counter -gt 10 ]]
+until [[ $counter -gt 10 ]]
 do
     echo "$counter"
     ((counter++))
